@@ -12,7 +12,7 @@ def fetch_poster(movie_id):
 
     Falls back to a placeholder image if the key is missing or the request fails.
     """
-    api_key = os.getenv("TMDB_API_KEY")
+    api_key = "1e16d0940d1b72934b095fd257a59866"
     if not api_key:
         # don't raise here; allow the app to run but warn the user in the UI
         st.warning("TMDB_API_KEY not set. Poster images may not load.")
@@ -84,6 +84,7 @@ if st.button("Show Recommendation"):
         with col:
             st.text(recommended_movie_names[idx])
             st.image(recommended_movie_posters[idx])
+
 
 
 
