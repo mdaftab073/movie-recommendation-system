@@ -1,8 +1,7 @@
-mhdir -p ~/.streamlit/credentials.toml
-echo"\
+mkdir -p ~/.streamlit/
+echo "\
 [server]\n\
-port=$PORT\N\
-enableCORS=false\n\
-headless=true\n\
-\n\
+port = $PORT\n\
+enableCORS = false\n\
+headless = true\n\
 " > ~/.streamlit/config.toml
