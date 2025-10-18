@@ -1,0 +1,78 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# C extensions
+*.so
+
+# Distribution / packaging
+.Python
+env/
+venv/
+ENV/
+build/
+dist/
+.eggs/
+*.egg-info/
+
+# Installer logs
+pip-log.txt
+pip-delete-this-directory.txt
+
+# PyInstaller
+*.manifest
+*.spec
+
+# Unit test / coverage reports
+htmlcov/
+.tox/
+.nox/
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# PyCharm
+.idea/
+
+# VS Code
+.vscode/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Data files (do not commit large pickles) — keep local only
+*.pkl
+*.h5
+*.sqlite3
+
+# Secret files
+.env
+
+# Logs
+logs/
+*.log
+
+# Allow list for requirements, procfile, and app code
+!requirements.txt
+!Procfile
+!app.py
+!main.py
+
+# Ignore datasets in project root
+tmdb_5000_credits.csv
+tmdb_5000_movies.csv
+
+# Ignore system-specific absolute path backups
+.DS_Store
+*.swp
+
+# Notebook checkpoints
+.ipynb_checkpoints/
