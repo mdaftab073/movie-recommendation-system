@@ -21,7 +21,7 @@ download_similarity()
 
 # Download similarity.pkl dynamically
 SIMILARITY_FILE_ID = "1VSLh4SjTTvNA7pl6m0gAKJTDeqnZ3JQW"
-download_file(SIMILARITY_FILE_ID, "similarity.pkl")
+#download_file(SIMILARITY_FILE_ID, "similarity.pkl")
 
 # Ensure movie_list.pkl exists in repo
 MOVIE_LIST_FILE = "movie_list.pkl"
@@ -73,6 +73,7 @@ if st.button("Show Recommendation"):
         with col:
             st.text(recommended_movie_names[idx])
             st.image(recommended_movie_posters[idx])
+
 
 
 
