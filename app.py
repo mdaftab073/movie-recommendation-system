@@ -5,15 +5,19 @@ from pathlib import Path
 import streamlit as st
 
 # Function to download file from Google Drive
-def download_file(file_id, filename):
-    if not os.path.exists(filename):
-        url = f"https://drive.google.com/uc?export=download&id={file_id}"
-        r = requests.get(url)
-        with open(filename, "wb") as f:
-            f.write(r.content)
-        print(f"{filename} downloaded!")
+import gdown
+import os
+
+def download_similarity():
+    if not os.path.exists("similarity.pkl"):
+        url = "https://drive.google.com/uc?id=1VSLh4SjTTvNA7pl6m0gAKJTDeqnZ3JQW"
+        gdown.download(url, "similarity.pkl", quiet=False)
+        print("similarity.pkl downloaded!")
     else:
-        print(f"{filename} already exists!")
+        print("similarity.pkl already exists!")
+
+download_similarity()
+
 
 # Download similarity.pkl dynamically
 SIMILARITY_FILE_ID = "1VSLh4SjTTvNA7pl6m0gAKJTDeqnZ3JQW"
@@ -69,6 +73,7 @@ if st.button("Show Recommendation"):
         with col:
             st.text(recommended_movie_names[idx])
             st.image(recommended_movie_posters[idx])
+
 
 
 
